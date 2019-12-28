@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script id="" src="js/jquery-3.4.1.min.js"></script>
+    <script id="" src="js/jquery-ui.min.js"></script>
+    <script id="" src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script id="" src="js/bootstrap/bootstrap-slider.min.js"></script>
+    <script id="" src="js/bootstrap/bootstrap.min.js"></script>
+    <script id="" src="js/bootstrap/bootstrap-checkbox.min.js"></script>
+    <script id="" src="js/moment-2.18.1.min.js"></script>
+    <script src="js/charts/apexcharts.js"></script>    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Start Bootstrap">
+    <title>
+        Mood Tracker
+    </title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/all.css">
+    
+    <script src="js/database_func.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/graph.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-11 col-lg-8 mx-auto">
+                <div class="tracker tracker-signin my-5">
+                    <div class="tracker-title text-center text-white">
+                        <h1>Mood Tracker</h1>
+                    </div>
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>Graph Screen</h4>
+                        </div>
+                        <div class="card-body demo-container">
+                            <div class="btn-group btn-group-justified" style="width: 100%">
+                                <button id="button-prev" href="input.html" class="btn btn-info">
+                                    Prev
+                                </button>
+                                <button id="button-week" href="input.html" class="btn btn-success active">W</button>
+                                <button id="button-month" href="#" class="btn btn-success">M</button>
+                                <button id="button-year" href="#" class="btn btn-success">Y</button>
+                                <button id="button-next" href="input.html" class="btn btn-info">Next</button>
+                            </div>   
+                            <div id="chart">
+                                <apexchart type=line height=400 :options="chartOptions" :series="series" />
+                            </div>
+                            <hr class="my-0">
+                            <div id="trackday" class="tracker-option row">
+                                <div class="text-center col-md-12">
+                                <h2  id="current_status" class="text-center text-white">
+                                    
+                                </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group btn-group-justified" style="width: 100%">
+                                <a id="button-input" href="input.html" class="btn btn-info">Input</a>
+                                <a id="button-graph" href="#" class="btn btn-info active">Graph</a>
+                                <button id="button-export" href="#" class="btn btn-info">Export</button>
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

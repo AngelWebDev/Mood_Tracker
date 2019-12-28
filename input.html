@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script id="" src="js/jquery-3.4.1.min.js"></script>
+    <script id="" src="js/jquery-ui.min.js"></script>
+    <script id="" src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script id="" src="js/bootstrap/bootstrap-slider.min.js"></script>
+    <script id="" src="js/bootstrap/bootstrap.min.js"></script>
+    <script id="" src="js/bootstrap/bootstrap-checkbox.min.js"></script>
+    <script id="" src="js/moment-2.18.1.min.js"></script>
+    <script id="" src="js/rangeslider.min.js"></script>
+    <script id="" src="js/underscore.js"></script>
+    <script id="" src="js/picker.js"></script>
+    <script id="" src="js/picker.date.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Start Bootstrap">
+    <title>
+        Mood Tracker
+    </title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/rangeslider.css">
+    <link rel="stylesheet" href="css/datepicker-themes/default.css">
+    <link rel="stylesheet" href="css/datepicker-themes/default.date.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/checkboxes.min.css">
+
+    <script src="js/common.js"></script>
+    <script id="" src="js/database_func.js"></script>
+    <script id="" src="js/slider_data.js"></script>
+    <script id="" src="js/input.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-11 col-lg-8 mx-auto">
+                <div class="tracker tracker-signin my-5">
+                    <div class="tracker-title text-center text-white">
+                        <h1>Mood Tracker</h1>
+                    </div>
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>Input Screen</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="tracker-option row">
+                                <label class="option-label col-sm-4">Mood</label>
+                                <div class="option-range col-sm-8">
+                                    <input id="mood" type="range" name="participants" min="-10" max="10" defaultvalue="0" />
+                                    <div class="slider-value-tip">
+                                        <span class="range-minvalue-tip">-10</span>
+                                        <span class="range-defaultalue-tip" style="left:49%">0</span>
+                                        <span class="range-maxalue-tip">10</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracker-option row">
+                                <label class="option-label col-sm-4">Sleep</label>
+                                <div class="option-range col-sm-8">
+                                    <input id="sleep" type="range" name="participants" min="0" max="24" defaultvalue="8" />
+                                    <div class="slider-value-tip">
+                                        <span class="range-minvalue-tip">0</span>
+                                        <span class="range-defaultalue-tip" style="left: 35%">8</span>
+                                        <span class="range-maxalue-tip">24</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracker-option row">
+                                <label class="option-label col-sm-4">Energy</label>
+                                <div class="option-range col-sm-8">
+                                    <input id="energy" type="range" name="participants" min="-10" max="10" defaultvalue="0" />
+                                    <div class="slider-value-tip">
+                                        <span class="range-minvalue-tip">-10</span>
+                                        <span class="range-defaultalue-tip" style="left: 49%">0</span>
+                                        <span class="range-maxalue-tip">10</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracker-option row">
+                                <label class="option-label col-sm-4">Arguments</label>
+                                <div class="option-range col-sm-8">
+                                    <input id="arguments" type="range" name="participants" min="0" max="10" defaultvalue="0" />
+                                    <div class="slider-value-tip">
+                                        <span class="range-minvalue-tip">0</span>
+                                        <span class="range-defaultalue-tip"></span>
+                                        <span class="range-maxalue-tip">10</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracker-option row">
+                                <label class="option-label col-sm-4">Supportiveness</label>
+                                <div class="option-range col-sm-8">
+                                    <input id="supportiveness" type="range" name="participants" min="-10" max="10" defaultvalue="0" />
+                                    <div class="slider-value-tip">
+                                        <span class="range-minvalue-tip">-10</span>
+                                        <span class="range-defaultalue-tip" style="left: 49%">0</span>
+                                        <span class="range-maxalue-tip">10</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracker-option row">
+                                <label class="option-label col-sm-4">Productivity</label>
+                                <div class="option-range col-sm-8">
+                                    <input id="productivity" type="range" name="participants" min="0" max="10" defaultvalue="5"/>
+                                    <div class="slider-value-tip">
+                                        <span class="range-minvalue-tip">0</span>
+                                        <span class="range-defaultalue-tip" style="left: 49%">5</span>
+                                        <span class="range-maxalue-tip">10</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracker-option row">
+                                <label class="option-label col-4 col-sm-4">Periods</label>
+                                <div class="col-8 col-sm-8">
+                                    <input type="checkbox" id="periods" class="form-control custom-control-input" value="0" name="periods">
+                                </div>
+                            </div>
+                            <div class="tracker-option row">
+                                <label class="option-label col-4 col-sm-4 ">Comment</label>
+                                <div class="col-8 col-sm-8">
+                                    <input typpe="text" value="" class="form-control" id="comment" class="" />
+                                </div>
+                            </div>
+                            <hr class="my-0">
+                            <div id="overscore" class="tracker-option row">
+                                <label class="option-label col-4 col-sm-4">Overall Score</label>
+                                <div class="col-8 col-sm-8 text-center">
+                                    <label id="score" class="col-sm-6 text-center">8.3</label>
+                                </div>
+                            </div>
+                            <div class="slider-container">
+                                <div id="js-slider"></div>
+                            </div>
+                            <hr class="my-0">
+                            <div id="trackday" class="tracker-option row">
+                                <div class="row col-7 col-sm-7">
+                                    <button id="button-datepicker" class="btn btn-info">
+                                        <div class="row">
+                                            <label id="trackday-month" class="col-4 col-sm-4 text-center">
+                                                08
+                                            </label>
+                                            <label id="trackday-date" class="col-4 col-sm-4 text-center">
+                                                15
+                                            </label>
+                                            <label id="trackday-year" class="col-4 col-sm-4 text-center">
+                                                19
+                                            </label>
+                                            <div>
+                                    </button>
+                                    <input type="text" id="input-datepicker" readonly="" class="picker__input picker__input--active" aria-haspopup="true" aria-expanded="true" aria-readonly="false" aria-owns="input_from_root" />
+                                </div>
+                                <div class="col-5 col-sm-5 text-center">
+                                    <button id="button-update" class="btn btn-primary text-uppercase" type="submit">
+                                        Submit
+                                    </button>
+                                    <button id="button-delete" class="btn btn-primary text-uppercase" type="button">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group btn-group-justified" style="width: 100%">
+                                <a id="button-input" href="#" class="btn btn-info active">Input</a>
+                                <a id="button-graph" href="graph.html" class="btn btn-info">Graph</a>
+                                <button id="button-export" class="btn btn-info">Export</button>
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

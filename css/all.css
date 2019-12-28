@@ -1,0 +1,298 @@
+
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+
+body {
+  
+  background: linear-gradient(to right, #fe3980, #fe805f);
+}
+
+.tracker-title {
+  padding-top: 1rem;
+
+}
+.tracker .card {
+  background-color: rgba(0, 0, 0, .05);  
+  color: white;
+}
+
+.tracker .card .card-body {
+  padding-top: 1.5rem;
+}
+
+.option-label {
+
+}
+
+.tracker-option input {
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.tracker-option {
+  padding: 1.5rem 1rem;
+}
+
+.tooltip {
+  opacity: 1;
+}
+
+.tooltip.top .tooltip-arrow {
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-top-color: transparent;
+    border-style: solid;    
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px 5px 0;
+    border-top-color: #000;
+    position: absolute;
+}
+
+.slider-track .slider-selection {
+  background: transparent;
+}
+
+#comment {
+  width: 100%;
+}
+
+#overscore >div > label {  
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 1rem;  
+  border: 1px solid #fe805f;
+}
+
+#trackday label {  
+  border: 1px solid #fe805f;
+  background-color: rgba(0, 0, 0, .05);  
+  font-size: 1rem;
+  font-weight: bold;
+  padding: .375rem .75rem;
+}
+
+#trackday > div:first-child {
+  margin: 0px;
+  padding: 0px;
+}
+
+#button-datepicker, #button-datepicker > div {
+  margin: auto;
+  padding: 0px;
+  width: 100%;
+  border-radius: 0px;
+  border: 0px;
+}
+
+#button-datepicker label {
+  margin-bottom: 0px;
+
+}
+
+.option-range { 
+  padding-top: 9px;
+}
+.slider-value-tip {
+  padding-top: 10px;
+}
+
+.slider-value-tip > span {
+  position: absolute;
+}
+
+.range-maxalue-tip {  
+  right: 7px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tracker-option {
+    
+  }
+
+  #overscore, #trackday {
+    
+  }
+
+  #trackday label {
+    padding: 0px;
+    padding: .375rem .75rem;
+  }
+}
+
+
+#button-datepicker {
+  background-color: rgba(80, 80, 0, .05);  
+}
+
+#input-datepicker {
+  display: none;
+}
+
+
+.rangeslider__tooltip {
+  display: block;
+  margin-top: 2.5em;
+  font-size: 12px;
+  color: #a59eb5;
+}
+
+.rangeslider,
+input[type='range'] {
+  
+}
+
+.rangeslider__handle {
+  border-radius: 22px;
+  line-height: 27px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #555555;
+}
+.rangeslider__handle:after {
+  background: 0;
+}
+
+.rangeslider,
+.rangeslider__fill {
+  display: block;
+  border-radius: 10px;  
+  background: white;
+}
+
+.rangeslider {
+  background: white;
+  
+  position: relative;
+}
+
+.rangeslider--horizontal {
+  height: 10px;
+  width: 100%;
+}
+
+.rangeslider--vertical {
+  width: 20px;
+  min-height: 150px;
+  max-height: 100%;
+}
+
+.rangeslider--disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+
+.rangeslider__fill {
+  position: absolute;
+}
+
+.rangeslider--horizontal .rangeslider__fill {
+  top: 0;
+  height: 100%;
+}
+
+.rangeslider--vertical .rangeslider__fill {
+  bottom: 0;
+  width: 100%;
+}
+
+.rangeslider__handle {
+  background: white;
+  border: 7px solid white;
+  cursor: pointer;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.rangeslider__handle.js-low {
+  border-color: #4bc67d;
+}
+.rangeslider__handle.js-med {
+  border-color: #f1c40f;
+}
+.rangeslider__handle.js-high {
+  border-color: #b94a48;
+}
+
+.rangeslider__handle:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.rangeslider--horizontal .rangeslider__handle {
+  top: -16px;
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+}
+
+.rangeslider--vertical .rangeslider__handle {
+  left: -10px;
+  touch-action: pan-x;
+  -ms-touch-action: pan-x;
+}
+
+input[type="range"]:focus + .rangeslider .rangeslider__handle {
+  -moz-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+  -webkit-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+}
+
+
+
+
+select.flat-select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #008FFB url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'60px\' height=\'60px\'><polyline fill=\'white\' points=\'46.139,15.518 25.166,36.49 4.193,15.519\'/></svg>") no-repeat scroll right 2px top 9px / 16px 16px;
+    border: 0 none;
+    border-radius: 3px;
+    color: #fff;
+    font-family: arial,tahoma;
+    font-size: 16px;
+    font-weight: bold;
+    outline: 0 none;
+    height: 33px;
+    padding: 5px 20px 5px 10px;
+    text-align: center;
+    text-indent: 0.01px;
+    text-overflow: "";
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease 0s;
+    width: auto;
+    -webkit-transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -ms-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+  }
+
+  #chart {
+    color: black;
+  }
